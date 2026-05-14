@@ -17,7 +17,7 @@ export class SignIn {
   authenticate(){
     this.loginService.login({email: this.email,password: this.password}).subscribe({
       next: result=>this.router.navigate(["/dashboard"]),
-      error:err=>console.log("login failed")
+      error:err=>console.log("login failed",err)
     })
   }
 }
