@@ -1,4 +1,13 @@
+# Dependency directories
 node_modules/
-    .env
-    dist/
-    .angular/
+
+# IDE files
+.vscode/
+.idea/
+
+# Production builds
+dist/
+.angular/
+
+# Environment variables
+.env
