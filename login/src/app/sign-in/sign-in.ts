@@ -16,7 +16,10 @@ export class SignIn {
   password!:string;
   authenticate(){
     this.loginService.login({email: this.email,password: this.password}).subscribe({
-      next: result=>this.router.navigate(["/dashboard"]),
+      next: result=>{
+        this.router.navigate(["/dashboard"])
+        console.log("Login Succesfull");
+      },
       error:err=>console.log("login failed",err)
     })
   }

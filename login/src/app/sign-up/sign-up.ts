@@ -16,7 +16,10 @@ export class SignUp {
   password!:String;
   register(){
     this.registerService.registerUser({email:this.email,password:this.password}).subscribe({
-      next:result=>this.router.navigate(['/login']),
+      next:result=>{
+        this.router.navigate(['/login'])
+        console.log("User Registered Successfull");
+      },
       error:err=>console.log("Registration Failed",err)
     })
   }
