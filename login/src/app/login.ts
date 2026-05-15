@@ -7,6 +7,6 @@ import { inject, Injectable } from '@angular/core';
 export class Login {
   http=inject(HttpClient)
   login(data:any){
-    return this.http.post("http://localhost:3000/auth/login",data)
+    return this.http.post("http://localhost:3000/user/login",data)
   }
 }

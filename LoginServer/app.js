@@ -15,6 +15,6 @@ app.listen(process.env.PORT,async ()=>{
 })
 const cors = require('cors');
 app.use(cors({
-    origin: 'http://localhost:4200', 
+    origin: '*', 
     credentials: true               
 }));
